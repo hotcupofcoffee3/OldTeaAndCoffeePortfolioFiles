@@ -1,0 +1,460 @@
+/* Overall Settings */
+
+*{margin: auto; text-align: center;}
+html{background-color:rgba(58,39,22,1);}
+body{max-width: 1300px;}
+.dark{background-color: rgba(58,39,22,1); color: rgba(242,220,162,1);}
+.light{background-color: rgba(133,126,84,1); color: rgba(10,0,0,1);}
+@font-face{font-family: Eurof; src: url(fonts/eurof35.ttf);}
+@font-face{font-family: MankSans; src: url(fonts/MankSans.ttf);}
+p,div{font-size: 20px; font-family: Eurof;}
+h1, h4{padding: 3%; font-family: MankSans;}
+h1{font-size: 1em;}
+h4{font-size: .75em;}
+.stuff{width: 100%; position: relative;}
+a{text-decoration: none; color: rgba(56,146,182,1);}
+#resume{padding: 10px; border-radius: 5px;}
+
+/*** Clearfix Solution for Floats ***/
+
+	#intro:after,
+	#me:after,
+	.skillDots:after,
+	.skillLevel:after,
+	#skills:after,
+	#birdPages:after,
+	#projects:after{
+		content: "";
+		visibility: hidden;
+		display: block;
+		height: 0px;
+		clear: both;
+	}
+
+/*** Intro ***/
+
+	#intro{
+		max-width: 1300px;
+	}
+	#demo{
+		width: 90%;
+		max-width: 1300px;
+		min-height: 50%;
+		margin: 5%;
+		position: absolute;
+		z-index: 1;
+		color: black;
+	}
+	#profilePic{
+		position: relative;
+		margin: auto;
+		max-height: 100%;
+	}
+	#profilePic img{
+		width: 100%;
+	}
+	#name{
+		font-size: 1.25em;
+		padding-top: 3%;
+	}
+	#whatAmI{
+		font-size: .9em;
+	}
+
+/*** General Info ***/
+
+	#me{
+		padding: 5% 10% 10% 10%;
+	}
+	#famPic,
+	#aboutMe{
+		float: left;
+	}
+	#famPic img{
+		width: 50%;
+		border-radius: 50%;
+	}
+	#aboutMe{
+		width: 90%;
+		padding: 5%;
+		font-weight: bold;
+	}
+	#aboutMe li{
+		padding: 2.5% 0;
+		text-align: center;
+		list-style: none;
+	}
+
+/*** Skills ***/
+
+	#skills:after{
+		height: 5%;
+	}
+	.skill{
+		width: 40%;
+		margin: 5%;
+		float: left;
+		/*border: 1px solid white;*/
+	}
+		.lang{
+			clear: left;
+			margin-bottom: 5%;
+			margin-top: 15%;
+			font-size: 30px;
+		}
+		.langLogo{
+			margin: 5%;
+		}
+			.langLogo img{
+				width: 80%;
+			}
+		.skillLevel{
+		}
+			.skillDots{
+				width: 110px;
+				margin: auto;
+				padding: 3%;
+			}
+				.skillPoint{
+					width: 20px;
+					height: 20px;
+					border-radius: 50%;
+					border: 1px solid rgba(242,220,162,1);
+					float: left;
+					margin: auto;
+				}
+				.skillFull{
+					background-color: rgba(242,220,162,1);
+				}
+
+	.currentWork p{
+		font-size: 25px;
+	}
+	#projects>div{
+		float: left;
+		width: 40%;
+		margin: 5%;
+	}
+	.projects:hover{
+		cursor: pointer;
+	}
+		.projects .projectTitle{
+			padding: 10px 0;
+		}
+		.projects .projectDescription{
+			font-size: 16px;
+			padding: 10px 0;
+		}
+		.projects .projectPhoto img{
+			width: 100%;
+			border-radius: 10px;
+		}
+
+/*** Birds ***/
+
+	#birdCarousel{
+		min-height: initial;
+		position: relative;
+	}
+
+	#birds{
+		position: relative;
+	}
+		#birdPics{
+			position: relative;
+			width: 100%;
+		}
+			#birdPic{
+				position: relative;
+				width: 100%;
+			}
+				#birdPic img{
+					width: 100%;
+					opacity: 0;
+					top: 0;
+					left: 0;
+					position: absolute;
+					transition: 0.5s;
+				}
+				#prevBird,
+				#nextBird{
+					height: 100%;
+					width: 10%;
+					position: absolute;
+					top: 0;
+					color: black;
+				}
+				#prevBird:hover,
+				#nextBird:hover{
+					cursor: pointer;
+				}
+				#prevBird{left: 0;}
+				#nextBird{right: 0;}
+
+					#prevBird p,
+					#nextBird p{
+						position: absolute;
+						width: 100%;
+						height: 50px;
+						top: 0;
+						bottom: 0;
+						font-size: 50px;
+					}
+				#birdName,
+				#birdPages{
+					font-size: 15px;
+					width: 240px;
+					padding: 2.5px;
+					position: absolute;
+					left: 0;
+					right: 0;
+					background-color: rgba(10,0,0,.5);
+				}
+				#birdName{
+					bottom: 20px;
+					color: white;
+					border-radius: 5px 5px 0px 0px;
+				}
+				#birdPages{
+					bottom: 0;
+					border-radius: 0px 0px 5px 5px;
+					
+				}
+					#birdPages div{
+						width: 10px;
+						height: 10px;
+						margin: 2.5px 5px;
+						border-radius: 50%;
+						float: left;
+					}
+						#birdPages div:hover{
+							cursor: pointer;
+						}
+					#birdPages div.unBirdPg{
+						background-color: rgba(204,204,204,.3);
+					}
+					#birdPages div.currBirdPg{
+						background-color: rgba(204,204,204,1);
+					}
+
+
+
+	/*#birdPics{border: 1px solid white;}
+	#prevBird,#nextBird{border: 1px solid green;}
+	#prevBird p, #nextBird p{border: 1px solid red;}
+	#birdName{border: 1px solid yellow;}
+	#birdPages{border: 1px solid blue;}*/
+			
+
+
+/*** Quote Quiz ***/
+
+	#choices li,
+	#playAgain{
+		border-radius: 10px;
+		padding: 5%;
+		margin: auto;
+		margin-top: 5%;
+		margin-bottom: 5%;
+		background-color: rgba(25,64,79,1);
+		width: 60%;
+		color: rgba(242,220,162,1);
+		cursor: pointer;
+		list-style: none;
+		font-family: Eurof;
+	}
+	#choices{
+		padding: 5%;
+	}
+	#results{
+		clear: left;
+		padding: 5%;
+		font-size: 20px;
+	}
+	#quoteQuiz{
+		text-align: center;
+	}
+	#quote{
+		margin-top: 0;
+		padding: 5%;
+		height: 15%;
+	}
+	#finalScore{
+		padding: 10% 0;
+	}
+
+@media screen and (min-width: 400px){
+	.skill{
+		width: 30%;
+		margin: 1.5%;
+	}
+	h1{
+		font-size: 1.1em;
+		padding-bottom: 0px;
+	}
+	h4{
+		font-size: 0.6em;
+		padding: 2%;
+	}
+	#choices{
+		padding: default;
+	}
+	#choices li{
+		padding: 2%;
+		margin: 1%;
+		width: 27%;
+		float: left;
+		font-size: 12px;
+	}
+	#quote{
+		padding: 3% 10%;
+		height: 20%;
+		font-size: 18px;
+	}
+	#results{
+		padding: 2%;
+		font-size: 15px;
+	}
+	#finalScore{
+		padding: 3% 0;
+	}
+}
+@media screen and (min-width: 600px){
+	.stuff{
+		min-height: 100%;
+	}
+	/*#famPic{
+		width: 40%;
+	}
+	#famPic img{
+		width: 100%;
+	}
+	#aboutMe{
+		width: 45%;
+		padding: 5% 0 5% 5%;
+		margin: 0 0 0 5%;
+		color: rgba(58,39,22,1);
+	}*/
+	#aboutMe li{
+		/*padding: 10px 0;
+		text-align: left;*/
+		font-size: 1.25em;
+	}
+
+	#birdName,
+	#birdPages{
+		font-size: 20px;
+		padding: 5px;
+	}
+	#birdName{
+		bottom: 30px;
+	}
+		#birdPages div{
+			margin: 5px;
+		}
+	#quote,
+	#results{
+		font-size: 20px;
+	}
+	#quote{
+		padding: 3% 15%;
+		height: 15%;
+	}
+	#choices li{
+		font-size: 18px;
+	}
+	#choices li:hover{
+		background-color: rgba(56,146,182,1);
+	}
+	
+}
+@media screen and (min-width: 800px){
+	h1{font-size: 1.5em;}
+	h4{font-size: 1em;}
+	.lang{font-size: 40px;}
+	.skill{
+		width: 25%;
+		margin: 4.16%;
+	}
+	#projects>div{
+		float: left;
+		width: 30%;
+		margin: 5% 10%;
+	}
+		.projects .projectDescription{
+			font-size: 20px;
+		}
+	
+	#aboutMe li{
+		font-size: 1.5em;
+	}
+	#birdName,
+	#birdPages{
+		font-size: 25px;
+		padding: 7.5px 10px;
+	}
+	#birdName{
+		bottom: 35px;
+	}
+}
+@media screen and (min-width: 1000px){
+	/*#profilePic{
+		max-width: 50%;
+	}
+	#demo{
+		padding-top: 20%;
+		width: 40%;
+	}*/
+	#choices li,
+	#quote,
+	#results{
+		font-size: 30px;
+	}
+	#choices li{
+		margin-bottom: 1%;
+	}
+	#quote{
+		padding-bottom: 1.5%;
+	}
+	h1{font-size: 1.75em;}
+	h4{font-size: 1.2em;}
+	p,div{font-size: 30px;}
+	.skillDots{
+		width: 150px;
+		margin: auto;
+		padding: 3%;
+	}
+		.skillPoint{
+			width: 28px;
+			height: 28px;
+			border-radius: 50%;
+			border: 1px solid rgba(242,220,162,1);
+			float: left;
+			margin: auto;
+		}
+	/*#name{
+		font-size: 40px;
+	}
+	#whatAmI{
+		font-size: 30px;
+	}*/
+	#aboutMe li{
+		font-size: 1.25em;
+	}
+	#famPic img{
+		width: 40%;
+	}
+}
+@media screen and (min-width: 1200px){
+	/*#demo{
+		width: 100%;
+	}*/
+}
+
+@media screen and (min-width: 1300px){
+	#demo{
+		width: 100%;
+		margin: 5% auto;
+	}
+}
+

@@ -1,0 +1,91 @@
+<html>
+<head>
+	<link rel="icon" href="img/favicon.png">
+	<script type='application/javascript' src='fastClick/fastclick.js'></script>
+	<link rel="stylesheet" type="text/css" href="Portfolio.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div id="main">
+
+	<!--  Intro  -->
+		<div class="stuff dark">
+			<div id="intro">
+				<div id="demo">
+					<div id="name">Adam Moore</div>
+					<div id="whatAmI">a bit of me<a href="matchingGame/matching.html" style="color: black">.</a></div>
+				</div>
+				<div id="profilePic">
+					<img src="img/lunaAndMe1.jpeg" />
+				</div>
+			</div>
+		</div>
+
+	<!--  Me  -->
+		<div class="stuff light">
+			<div class="title"><h1>Me</h1></div>
+			<div id="me">
+				<div id="famPic"><img src="img/famPic.jpg" /></div>
+				<ul id="aboutMe">
+					<li>INTP.</li>
+					<li>Love nature and animals.</li>
+					<li>Only eat what can be grown from seed<br>(other than Himalayan Salt).</li>
+					<li>Willing to move to just about any place!</li>
+					<li>Recently took up birding! <br>(check <span style="cursor: pointer; color: rgba(100,0,0,1);" onclick="smoothScroll('birdCarousel', 15);">below</span> for a carousel of some of my bird photos.)</li>
+					<li>
+						<br><p style="font-weight: bold; font-size: 1.3em">MORE SPECIFICALLY:</p><br>
+						<p>I'm pursuing a career in web programming because, for years, I hadn't yet found anything that is both enjoyable and challenging.</p><br>
+						<p>I went from job to job, trying out various things, then would come home and spend my spare time pursuing my (nerdish) hobbies, such as birding, researching natural living (including solar energy, electromagnetism, plant-based diets, etc.), learning the piano, improving my horrible flexibility with yoga (when I work up the motivation), beginning woodworking using only hand tools, pondering existentialism, and many others... as well as web programming.</p><br>
+						<p>Obviously, those areas require an advanced degree (which I have, but not in those fields), years of training (which I do not have), or they pay nothing (which doesn't help in our monetary-based economy; a resource-based economy is where it's at!).</p><br>
+						<p>BUT, I discovered that a degree is not necessarily required in the area of web programming, so long as one knows how to actually PROGRAM. And if there is one thing I'm good at, it's learning something new on my own.</p><br>
+						<p>Therefore, I have been avidly pursuing knowledge, skills, and positions in front-end web programming for about a year, after having spent the previous 3 years programming for fun. In the meantime, I'm both emotionally-fulfilled and intellectually-restless being a stay-at-home dad with my two freakin' amazing kids.</p><br>
+					</li>
+					<li style="margin-top: 10px;"><a class="dark" id="resume" href="job/resume2.pdf" target="_blank">My Resume</a></li>
+				</ul>
+			</div>
+		</div>
+
+	<!--  Skills  -->
+		<div class="stuff dark">
+			<div class="title"><h1>What I can do<br>(so far)</h1></div>
+			<div class="subtitle"><h4>some languages &amp; whatnot</h4></div>
+			<div class="dark">
+				<p>Check out my<br><a href="https://teamtreehouse.com/christophermoore6" target="_blank">Team Treehouse profile</a></p>
+			</div>
+			<div id="skills"></div>
+			<div class="dark currentWork">
+				<p>My current work</p>
+				<div id="projects">
+				</div>
+			</div>
+		</div>
+
+	<!--  Birds  -->
+		<div class="stuff light" id="birdCarousel">
+			<div id="birds">
+				<div id="birdPics">
+					<div id="birdPic"></div>
+					<div id="prevBird" onclick="prevBird();"><p>&lt;</p></div>
+					<div id="nextBird" onclick="nextBird();"><p>&gt;</p></div>
+					<div id="birdName"></div>
+					<div id="birdPages"></div>
+				</div>
+			</div>
+		</div>
+
+	<!--  Quote Quiz  -->
+		<div class="stuff light">
+			<div class="title"><h1>Quote Quiz</h1></div>
+			<div class="subtitle"><h4>some of my favorite quotes</h4></div>
+			<div id="quoteQuiz">
+				<p id="quote"></p>
+				<p id="whoSaidIt"></p>
+				<ul id="choices"></ul>
+				<p id="results"></p>
+			</div>
+		</div>
+
+	</div>
+<script src="Portfolio.js"></script>
+</body>
+</html>

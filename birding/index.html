@@ -1,0 +1,30 @@
+<html>
+<head>
+	<link rel="icon" href="../img/faviconBirding.png">
+	<script type='application/javascript' src='../fastClick/fastclick.js'></script>
+	<link rel="stylesheet" type="text/css" href="birding.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	
+	<div id="mainOverall">
+		<div id="mainContentPage">
+
+			<div id='mainHeader'>
+
+				<div id="navBar">
+					<a class="navButtons" id="homeButton" href='../'>Home</a>
+					<a class="navButtons" id="albumsButton" onclick="loadBirdAlbums();">Albums</a>
+					<a class="navButtons" id="speciesButton" onclick="loadAllSpecies();">Species</a>
+				</div>
+
+			</div>
+
+			<div id='allBirdAlbumsContainer'></div>
+
+		</div>
+		<div id="openedAlbumPage"></div>
+		<div id="openedPhotoPage"></div>
+	<script type="application/javascript" src="birding.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+/* Overall Settings */
+
+	*{margin: auto; padding: 0; text-align: center;}
+	html{background-color:rgba(58,39,22,1);}
+	body{max-width: 1300px;}
+	.dark{background-color: rgba(58,39,22,1); color: rgba(242,220,162,1);}
+	.light{background-color: rgba(133,126,84,1); color: rgba(10,0,0,1);}
+	@font-face{font-family: Eurof; src: url(../fonts/eurof35.ttf);}
+	@font-face{font-family: MankSans; src: url(../fonts/MankSans.ttf);}
+	p,div{font-size: 10px; font-family: Eurof;}
+	a{text-decoration: none; color: rgba(56,146,182,1);}
+
+
+/*** Clearfix Solution for Floats ***/
+
+	#mainOverall:after,
+	.openedBirdAlbumHeaders:after,
+	#openedBirdAlbumPhotos:after,
+	#navBar:after,
+	#allBirdAlbumsContainer:after,
+	#openedBirdAlbum:after{
+		content: "";
+		visibility: hidden;
+		display: block;
+		height: 0px;
+		clear: both;
+	}
+#mainOverall{
+	padding: 5% 0;
+	max-width: 1200px;
+}
+#mainHeader{
+	padding: 5% 0;
+	font-size: 40px;
+}
+	#mainHeader div#navBar{
+		font-size: 20px;
+	}
+	a.navButtons{
+			background-color: rgba(133,126,84,1);
+			padding: 10px 0;
+			color: black;
+			float: left;
+			width: 33.3333%;
+		}
+	a.navButtons:hover{
+		cursor: pointer;
+		background-color: rgba(113,106,64,1);
+	}
+
+#allBirdAlbumsContainer{
+	padding: 1%;
+	overflow: scroll;
+}
+
+.birdAlbums:hover,
+.birdPhotoIcon:hover{
+	opacity: 0.75;
+	cursor: pointer;
+}
+.birdAlbums,
+.birdPhotoIcon{
+	transition: 0.1s;
+	float: left;
+	width: 48%;
+	margin: 1%;
+	position: relative;
+}
+#openedBirdAlbum{
+	padding: 1%;
+}
+.birdAlbums img,
+.birdPhotoIcon img{
+	width: 100%;
+	float: left;
+	border-radius: 5px;
+}
+.birdAlbumTitleOverlays,
+.birdPhotoOverlayIcons,
+.birdPhotoOverlayOriginal{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 3% 0;
+	background-color: black;
+	opacity: 0.6;
+	color: white;
+}
+	.birdAlbumTitleOverlays{
+		border-radius: 0 0 5px 5px;
+	}
+	.birdAlbumTitleOverlays p{
+		font-size: 12px;
+		
+	}
+
+.birdPhotoOverlayIcons p{
+	font-size: 10px;
+}
+.birdPhotoOverlayOriginal p{
+	font-size: 25px;
+}
+
+#openedAlbumPage,
+#openedPhotoPage{
+	background-color: black;
+	overflow: scroll;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: 0.5s;
+	width: 100%;
+	display: none;
+}
+
+#openedAlbumPage{
+	z-index: 1;
+	position: absolute;
+}
+
+#openedPhotoPage{
+	z-index: 2;
+	position: fixed;
+	opacity: 0;
+	
+}
+
+.openedBirdAlbumHeaders{
+	padding: 10px;
+}
+
+.backButtonContainers{
+	color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 10%;
+	padding: 10px;
+}
+.backButtonContainers .backButtons{
+	font-size: 15px;
+}
+
+	.backButtonContainers .backButtons:hover{
+		cursor: pointer;
+	}
+
+.openedBirdAlbumTitle{
+	color: white;
+	width: 100%;
+}
+
+	.openedBirdAlbumTitle p{
+		font-size: 20px;
+	}
+
+#openedBirdPhoto{
+	position: relative;
+	width: 100%;
+	max-width: 500px;
+	padding-top: 1.5%;
+}
+
+	#openedBirdPhoto img{
+		width: 100%;
+	}
+
+@media screen and (min-width: 600px){
+		.birdPhotoOverlayIcons p{
+			font-size: 16px;
+		}
+		.birdAlbumTitleOverlays p{
+			font-size: 18px;
+		}
+		.openedBirdAlbumTitle p{
+			font-size: 24px;
+		}
+		.navButtons{
+			font-size: 24px;
+		}
+		.birdAlbums,
+		.birdPhotoIcon{
+			width: 30.3333%;
+			margin: 1.5%;
+		}
+		#allBirdAlbumsContainer,
+		#openedBirdAlbum{
+			padding: 1.5%;
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
